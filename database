@@ -1,4 +1,3 @@
--- Step 1: Create the Question table if it doesn't exist
 CREATE TABLE IF NOT EXISTS Question (
     id SERIAL PRIMARY KEY,
     question_title TEXT NOT NULL,
@@ -11,7 +10,6 @@ CREATE TABLE IF NOT EXISTS Question (
     category TEXT NOT NULL
 );
 
--- Step 2: Insert data into the Question table
 INSERT INTO Question (
     question_title, option1, option2, option3, option4, right_answer, difficulty_level, category
 ) VALUES 
@@ -42,5 +40,4 @@ INSERT INTO Question (
 ('Which keyword is used to define a subclass in Java?', 'child', 'extends', 'inherits', 'subclass', 'extends', 'Easy', 'java'),
 ('What is the purpose of the "pass" statement in Python?', 'To stop the execution of a loop', 'To indicate an empty code block', 'To raise an exception', 'To terminate the program', 'To indicate an empty code block', 'Easy', 'python');
 
--- Step 3: Select all data from the Question table to verify insertion
 SELECT * FROM Question;
